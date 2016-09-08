@@ -1,0 +1,5 @@
+verilog work "Reconstructor.v"
+verilog work "ipcore_dir/TypeRom.v"
+verilog work "ipcore_dir/Pram.v"
+verilog work "ipcore_dir/LFMVram.v"
+verilog work "top.v"

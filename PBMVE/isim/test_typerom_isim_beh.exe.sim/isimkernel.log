@@ -1,0 +1,28 @@
+Command line:
+   test_typerom_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  8957
+
+Thu Aug 04 22:42:28 2016
+
+
+ Elaboration Time: 0.1248 sec
+
+ Current Memory Usage: 682.435 Meg
+
+ Total Signals          : 642
+ Total Nets             : 2068
+ Total Signal Drivers   : 256
+ Total Blocks           : 77
+ Total Primitive Blocks : 58
+ Total Processes        : 310
+ Total Traceable Variables  : 1342
+ Total Scalar Nets and Variables : 2821482
+
+ Total Simulation Time: 2.69882 sec
+
+ Current Memory Usage: 682.435 Meg
+
+Thu Aug 04 22:53:13 2016
+

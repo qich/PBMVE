@@ -1,0 +1,46 @@
+ISim log file
+Running: E:\MC\testTop_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/MC/testTop_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING: File "E:/MC/top.v" Line 30.  For instance uut/mv/, width 2 of formal port addra is not equal to width 16 of actual signal index.
+WARNING: File "E:/MC/top.v" Line 33.  For instance uut/mv/, width 9 of formal port douta is not equal to width 8 of actual signal mvx.
+WARNING: File "E:/MC/top.v" Line 30.  For instance uut/mv2/, width 2 of formal port addra is not equal to width 16 of actual signal index.
+WARNING: File "E:/MC/top.v" Line 34.  For instance uut/mv2/, width 9 of formal port douta is not equal to width 8 of actual signal mvy.
+WARNING: File "E:/MC/top.v" Line 32.  For instance uut/ifram/, width 6 of formal port addra is not equal to width 16 of actual signal indexLF.
+WARNING: File "E:/MC/top.v" Line 31.  For instance uut/R/, width 6 of formal port addra is not equal to width 16 of actual signal indexRGB.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.mv.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.mv2.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.ifram.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.R.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.
+# run 1.00us
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.mv.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.mv2.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.ifram.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testTop.uut.R.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.
+# run 1.00us

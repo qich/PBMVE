@@ -1,0 +1,561 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: motionCompensator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "motionCompensator.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "motionCompensator"
+Output Format                      : NGC
+Target Device                      : xc7vx330t-3-ffg1157
+
+---- Source Options
+Top Module Name                    : motionCompensator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\MC\motionCompensator.v" into library work
+Parsing module <motionCompensator>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <motionCompensator>.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 68: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 69: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 70: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 96: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 97: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 98: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 104: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 105: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 110: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 111: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 112: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 117: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 118: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 123: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 124: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 125: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 130: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 131: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 136: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 137: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 138: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 143: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 144: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 154: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 155: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "E:\MC\motionCompensator.v" Line 71: Assignment to we ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <motionCompensator>.
+    Related source file is "E:\MC\motionCompensator.v".
+        idle = 0
+        run = 1
+    Found 1-bit register for signal <state>.
+    Found 8-bit register for signal <addrx>.
+    Found 8-bit register for signal <addry>.
+    Found 8-bit register for signal <RGBx>.
+    Found 8-bit register for signal <RGBy>.
+    Found 8-bit register for signal <LFx>.
+    Found 8-bit register for signal <LFy>.
+    Found 5-bit register for signal <c>.
+    Found 1-bit register for signal <LF_conceal>.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_1_OUT> created at line 68.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_2_OUT> created at line 68.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_5_OUT> created at line 69.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_6_OUT> created at line 69.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_9_OUT> created at line 70.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_10_OUT> created at line 70.
+    Found 32-bit adder for signal <n0156> created at line 68.
+    Found 32-bit adder for signal <n0159> created at line 69.
+    Found 32-bit adder for signal <n0160> created at line 70.
+    Found 8-bit adder for signal <RGBy[7]_GND_1_o_add_43_OUT> created at line 137.
+    Found 8-bit adder for signal <RGBx[7]_GND_1_o_add_47_OUT> created at line 143.
+    Found 5-bit adder for signal <c[4]_GND_1_o_add_48_OUT> created at line 144.
+    Found 9-bit adder for signal <n0314[8:0]> created at line 154.
+    Found 9-bit adder for signal <n0316[8:0]> created at line 155.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_20_OUT<7:0>> created at line 97.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_43_OUT<7:0>> created at line 136.
+    Found 32x8-bit multiplier for signal <n0170> created at line 68.
+    Found 32x8-bit multiplier for signal <n0173> created at line 69.
+    Found 32x8-bit multiplier for signal <n0176> created at line 70.
+    Found 5-bit comparator greater for signal <GND_1_o_c[4]_LessThan_22_o> created at line 103
+    Found 5-bit comparator greater for signal <c[4]_GND_1_o_LessThan_23_o> created at line 103
+    Found 5-bit comparator greater for signal <GND_1_o_c[4]_LessThan_30_o> created at line 116
+    Found 5-bit comparator greater for signal <c[4]_GND_1_o_LessThan_31_o> created at line 116
+    Found 5-bit comparator greater for signal <GND_1_o_c[4]_LessThan_38_o> created at line 129
+    Found 5-bit comparator greater for signal <c[4]_GND_1_o_LessThan_39_o> created at line 129
+    Found 5-bit comparator greater for signal <GND_1_o_c[4]_LessThan_46_o> created at line 142
+    Found 5-bit comparator greater for signal <c[4]_PWR_1_o_LessThan_47_o> created at line 142
+    Found 8-bit comparator equal for signal <addry[7]_height[7]_equal_51_o> created at line 152
+    Found 8-bit comparator equal for signal <addrx[7]_width[7]_equal_52_o> created at line 152
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred  15 Adder/Subtractor(s).
+	inferred  55 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred  20 Multiplexer(s).
+Unit <motionCompensator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x8-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 15
+ 32-bit adder                                          : 3
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 6
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 5-bit register                                        : 1
+ 8-bit register                                        : 6
+# Comparators                                          : 10
+ 5-bit comparator greater                              : 8
+ 8-bit comparator equal                                : 2
+# Multiplexers                                         : 20
+ 32-bit 2-to-1 multiplexer                             : 2
+ 5-bit 2-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 10
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x8-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 15
+ 16-bit adder                                          : 3
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 6
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+# Comparators                                          : 10
+ 5-bit comparator greater                              : 8
+ 8-bit comparator equal                                : 2
+# Multiplexers                                         : 20
+ 32-bit 2-to-1 multiplexer                             : 2
+ 5-bit 2-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mmult_n01731> of sequential type is unconnected in block <motionCompensator>.
+WARNING:Xst:2677 - Node <Mmult_n01701> of sequential type is unconnected in block <motionCompensator>.
+WARNING:Xst:2677 - Node <Mmult_n01761> of sequential type is unconnected in block <motionCompensator>.
+
+Optimizing unit <motionCompensator> ...
+WARNING:Xst:1710 - FF/Latch <c_4> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_3> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_7> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_6> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_5> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_4> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_3> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_2> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_1> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addry_0> (without init value) has a constant value of 1 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrx_7> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrx_6> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrx_5> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrx_4> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrx_3> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrx_2> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LF_conceal> (without init value) has a constant value of 0 in block <motionCompensator>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:3203 - The FF/Latch <addrx_0> in Unit <motionCompensator> is the opposite to the following FF/Latch, which will be removed : <addrx_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block motionCompensator, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : motionCompensator.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 236
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 14
+#      LUT2                        : 16
+#      LUT3                        : 10
+#      LUT4                        : 32
+#      LUT5                        : 18
+#      LUT6                        : 16
+#      MUXCY                       : 55
+#      VCC                         : 1
+#      XORCY                       : 60
+# FlipFlops/Latches                : 37
+#      FD                          : 3
+#      FDCE                        : 1
+#      FDRE                        : 28
+#      FDSE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 75
+#      IBUF                        : 26
+#      OBUF                        : 49
+# DSPs                             : 3
+#      DSP48E1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7vx330tffg1157-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              37  out of  408000     0%  
+ Number of Slice LUTs:                  119  out of  204000     0%  
+    Number used as Logic:               119  out of  204000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    129
+   Number with an unused Flip Flop:      92  out of    129    71%  
+   Number with an unused LUT:            10  out of    129     7%  
+   Number of fully used LUT-FF pairs:    27  out of    129    20%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          84
+ Number of bonded IOBs:                  76  out of    600    12%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      3  out of   1120     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 37    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.474ns (Maximum Frequency: 678.518MHz)
+   Minimum input arrival time before clock: 1.250ns
+   Maximum output required time after clock: 5.413ns
+   Maximum combinational path delay: 4.052ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 1.474ns (frequency: 678.518MHz)
+  Total number of paths / destination ports: 581 / 104
+-------------------------------------------------------------------------
+Delay:               1.474ns (Levels of Logic = 8)
+  Source:            addrx_0 (FF)
+  Destination:       RGBx_7 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: addrx_0 to RGBx_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            11   0.232   0.336  addrx_0 (addrx_0)
+     LUT2:I1->O            1   0.043   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_lut<2> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_lut<2>)
+     MUXCY:S->O            1   0.230   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<2> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<2>)
+     MUXCY:CI->O           1   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<3> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<4> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<5> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<5>)
+     MUXCY:CI->O           0   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<6> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<6>)
+     XORCY:CI->O           1   0.251   0.289  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_xor<7> (GND_1_o_GND_1_o_sub_43_OUT<7>)
+     LUT6:I5->O            1   0.043   0.000  Mmux_RGBx[7]_GND_1_o_mux_113_OUT161 (RGBx[7]_GND_1_o_mux_113_OUT<7>)
+     FDRE:D                   -0.001          RGBx_7
+    ----------------------------------------
+    Total                      1.474ns (0.849ns logic, 0.625ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 74 / 18
+-------------------------------------------------------------------------
+Offset:              1.250ns (Levels of Logic = 9)
+  Source:            mvx<2> (PAD)
+  Destination:       RGBx_7 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: mvx<2> to RGBx_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.000   0.343  mvx_2_IBUF (mvx_2_IBUF)
+     LUT2:I0->O            1   0.043   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_lut<2> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_lut<2>)
+     MUXCY:S->O            1   0.230   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<2> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<2>)
+     MUXCY:CI->O           1   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<3> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<4> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<5> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<5>)
+     MUXCY:CI->O           0   0.012   0.000  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<6> (Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_cy<6>)
+     XORCY:CI->O           1   0.251   0.289  Msub_GND_1_o_GND_1_o_sub_43_OUT<7:0>_xor<7> (GND_1_o_GND_1_o_sub_43_OUT<7>)
+     LUT6:I5->O            1   0.043   0.000  Mmux_RGBx[7]_GND_1_o_mux_113_OUT161 (RGBx[7]_GND_1_o_mux_113_OUT<7>)
+     FDRE:D                   -0.001          RGBx_7
+    ----------------------------------------
+    Total                      1.250ns (0.617ns logic, 0.633ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 43658 / 48
+-------------------------------------------------------------------------
+Offset:              5.413ns (Levels of Logic = 18)
+  Source:            RGBy_1 (FF)
+  Destination:       indexRGB<15> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: RGBy_1 to indexRGB<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.232   0.587  RGBy_1 (RGBy_1)
+     LUT6:I0->O            3   0.043   0.353  Msub_GND_1_o_GND_1_o_sub_6_OUT_cy<5>11 (Msub_GND_1_o_GND_1_o_sub_6_OUT_cy<5>)
+     LUT3:I1->O            1   0.043   0.279  Msub_GND_1_o_GND_1_o_sub_6_OUT_xor<7>11 (GND_1_o_GND_1_o_sub_6_OUT<7>)
+     DSP48E1:A7->P1        1   2.392   0.542  Mmult_n0173 (n0173<1>)
+     LUT5:I0->O            1   0.043   0.000  Madd_n0159_Madd_lut<3> (Madd_n0159_Madd_lut<3>)
+     MUXCY:S->O            1   0.230   0.000  Madd_n0159_Madd_cy<3> (Madd_n0159_Madd_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<4> (Madd_n0159_Madd_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<5> (Madd_n0159_Madd_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<6> (Madd_n0159_Madd_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<7> (Madd_n0159_Madd_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<8> (Madd_n0159_Madd_cy<8>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<9> (Madd_n0159_Madd_cy<9>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<10> (Madd_n0159_Madd_cy<10>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<11> (Madd_n0159_Madd_cy<11>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<12> (Madd_n0159_Madd_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<13> (Madd_n0159_Madd_cy<13>)
+     MUXCY:CI->O           0   0.012   0.000  Madd_n0159_Madd_cy<14> (Madd_n0159_Madd_cy<14>)
+     XORCY:CI->O           1   0.251   0.279  Madd_n0159_Madd_xor<15> (indexRGB_15_OBUF)
+     OBUF:I->O                 0.000          indexRGB_15_OBUF (indexRGB<15>)
+    ----------------------------------------
+    Total                      5.413ns (3.371ns logic, 2.041ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5184 / 44
+-------------------------------------------------------------------------
+Delay:               4.052ns (Levels of Logic = 17)
+  Source:            width<7> (PAD)
+  Destination:       indexRGB<15> (PAD)
+
+  Data Path: width<7> to indexRGB<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.000   0.289  width_7_IBUF (width_7_IBUF)
+     DSP48E1:B7->P1        1   2.280   0.542  Mmult_n0173 (n0173<1>)
+     LUT5:I0->O            1   0.043   0.000  Madd_n0159_Madd_lut<3> (Madd_n0159_Madd_lut<3>)
+     MUXCY:S->O            1   0.230   0.000  Madd_n0159_Madd_cy<3> (Madd_n0159_Madd_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<4> (Madd_n0159_Madd_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<5> (Madd_n0159_Madd_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<6> (Madd_n0159_Madd_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<7> (Madd_n0159_Madd_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<8> (Madd_n0159_Madd_cy<8>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<9> (Madd_n0159_Madd_cy<9>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<10> (Madd_n0159_Madd_cy<10>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<11> (Madd_n0159_Madd_cy<11>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<12> (Madd_n0159_Madd_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  Madd_n0159_Madd_cy<13> (Madd_n0159_Madd_cy<13>)
+     MUXCY:CI->O           0   0.012   0.000  Madd_n0159_Madd_cy<14> (Madd_n0159_Madd_cy<14>)
+     XORCY:CI->O           1   0.251   0.279  Madd_n0159_Madd_xor<15> (indexRGB_15_OBUF)
+     OBUF:I->O                 0.000          indexRGB_15_OBUF (indexRGB<15>)
+    ----------------------------------------
+    Total                      4.052ns (2.942ns logic, 1.111ns route)
+                                       (72.6% logic, 27.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.474|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.04 secs
+ 
+--> 
+
+Total memory usage is 450144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

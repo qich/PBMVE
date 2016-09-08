@@ -1,0 +1,610 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc7vx330t-3-ffg1157
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\MC\motionCompensator.v" into library work
+Parsing module <motionCompensator>.
+Analyzing Verilog file "E:\MC\ipcore_dir\Rrom.v" into library work
+Parsing module <Rrom>.
+Analyzing Verilog file "E:\MC\ipcore_dir\mvrom.v" into library work
+Parsing module <mvrom>.
+Analyzing Verilog file "E:\MC\ipcore_dir\ifram.v" into library work
+Parsing module <ifram>.
+Analyzing Verilog file "E:\MC\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <motionCompensator>.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 74: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 75: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 76: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 110: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 111: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 112: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 113: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 114: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 118: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 119: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 120: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 123: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 124: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 125: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 126: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 127: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 130: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 131: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 132: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 135: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 136: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 137: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 138: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 139: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 142: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 143: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 144: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 147: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 148: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 149: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 150: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 151: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 154: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 155: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 156: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 159: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 160: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 166: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 167: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 168: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\MC\motionCompensator.v" Line 174: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <mvrom>.
+WARNING:HDLCompiler:1499 - "E:\MC\ipcore_dir\mvrom.v" Line 39: Empty module <mvrom> remains a black box.
+WARNING:HDLCompiler:189 - "E:\MC\top.v" Line 53: Size mismatch in connection of port <addra>. Formal port size is 2-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "E:\MC\top.v" Line 54: Size mismatch in connection of port <douta>. Formal port size is 9-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "E:\MC\top.v" Line 58: Size mismatch in connection of port <addra>. Formal port size is 2-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "E:\MC\top.v" Line 59: Size mismatch in connection of port <douta>. Formal port size is 9-bit while actual signal size is 8-bit.
+
+Elaborating module <ifram>.
+WARNING:HDLCompiler:1499 - "E:\MC\ipcore_dir\ifram.v" Line 39: Empty module <ifram> remains a black box.
+WARNING:HDLCompiler:189 - "E:\MC\top.v" Line 66: Size mismatch in connection of port <addra>. Formal port size is 6-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:1127 - "E:\MC\top.v" Line 68: Assignment to douta ignored, since the identifier is never used
+
+Elaborating module <Rrom>.
+WARNING:HDLCompiler:1499 - "E:\MC\ipcore_dir\Rrom.v" Line 39: Empty module <Rrom> remains a black box.
+WARNING:HDLCompiler:189 - "E:\MC\top.v" Line 73: Size mismatch in connection of port <addra>. Formal port size is 6-bit while actual signal size is 16-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "E:\MC\top.v".
+INFO:Xst:3210 - "E:\MC\top.v" line 63: Output port <douta> of the instance <ifram> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <motionCompensator>.
+    Related source file is "E:\MC\motionCompensator.v".
+        idle = 0
+        run = 1
+        finish = 2
+    Found 2-bit register for signal <state>.
+    Found 8-bit register for signal <tmpx>.
+    Found 8-bit register for signal <tmpy>.
+    Found 8-bit register for signal <addrx>.
+    Found 8-bit register for signal <addry>.
+    Found 8-bit register for signal <RGBx>.
+    Found 8-bit register for signal <RGBy>.
+    Found 8-bit register for signal <LFx>.
+    Found 8-bit register for signal <LFy>.
+    Found 1-bit register for signal <we>.
+    Found 5-bit register for signal <c>.
+    Found 1-bit register for signal <LF_conceal>.
+    Found 1-bit register for signal <endFlag>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_8_OUT> created at line 74.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_9_OUT> created at line 74.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_14_OUT> created at line 75.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_15_OUT> created at line 75.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_19_OUT> created at line 76.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_20_OUT> created at line 76.
+    Found 11-bit subtractor for signal <GND_2_o_GND_2_o_sub_35_OUT> created at line 111.
+    Found 11-bit subtractor for signal <GND_2_o_GND_2_o_sub_70_OUT> created at line 147.
+    Found 32-bit adder for signal <n0196> created at line 74.
+    Found 32-bit adder for signal <GND_2_o_GND_2_o_add_16_OUT> created at line 75.
+    Found 32-bit adder for signal <n0200> created at line 76.
+    Found 9-bit adder for signal <n0230> created at line 148.
+    Found 8-bit adder for signal <LFy[7]_GND_2_o_add_73_OUT> created at line 150.
+    Found 9-bit adder for signal <n0372[8:0]> created at line 159.
+    Found 9-bit adder for signal <n0374[8:0]> created at line 160.
+    Found 9-bit adder for signal <n0240> created at line 166.
+    Found 8-bit adder for signal <LFx[7]_GND_2_o_add_95_OUT> created at line 167.
+    Found 5-bit adder for signal <c[4]_GND_2_o_add_99_OUT> created at line 174.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_36_OUT<7:0>> created at line 111.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_71_OUT<7:0>> created at line 147.
+    Found 32x8-bit multiplier for signal <n0216> created at line 74.
+    Found 32x8-bit multiplier for signal <n0219> created at line 75.
+    Found 32x8-bit multiplier for signal <n0223> created at line 76.
+    Found 32-bit comparator greater for signal <RGBx[7]_GND_2_o_LessThan_12_o> created at line 75
+    Found 32-bit comparator greater for signal <RGBy[7]_GND_2_o_LessThan_13_o> created at line 75
+    Found 5-bit comparator greater for signal <GND_2_o_c[4]_LessThan_40_o> created at line 117
+    Found 5-bit comparator greater for signal <c[4]_GND_2_o_LessThan_41_o> created at line 117
+    Found 5-bit comparator greater for signal <GND_2_o_c[4]_LessThan_52_o> created at line 129
+    Found 5-bit comparator greater for signal <c[4]_GND_2_o_LessThan_53_o> created at line 129
+    Found 5-bit comparator greater for signal <GND_2_o_c[4]_LessThan_64_o> created at line 141
+    Found 5-bit comparator greater for signal <c[4]_GND_2_o_LessThan_65_o> created at line 141
+    Found 5-bit comparator greater for signal <GND_2_o_c[4]_LessThan_76_o> created at line 153
+    Found 5-bit comparator greater for signal <c[4]_GND_2_o_LessThan_77_o> created at line 153
+    Found 8-bit comparator not equal for signal <n0053> created at line 158
+    Found 8-bit comparator equal for signal <n0055> created at line 158
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred  19 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <motionCompensator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x8-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 20
+ 11-bit subtractor                                     : 2
+ 32-bit adder                                          : 3
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 4
+ 9-bit subtractor                                      : 6
+# Registers                                            : 12
+ 1-bit register                                        : 3
+ 5-bit register                                        : 1
+ 8-bit register                                        : 8
+# Comparators                                          : 12
+ 32-bit comparator greater                             : 2
+ 5-bit comparator greater                              : 8
+ 8-bit comparator equal                                : 1
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 19
+ 32-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 16
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/mvrom.ngc>.
+Reading core <ipcore_dir/ifram.ngc>.
+Reading core <ipcore_dir/Rrom.ngc>.
+Loading core <mvrom> for timing and area information for instance <mv>.
+Loading core <mvrom> for timing and area information for instance <mv2>.
+Loading core <ifram> for timing and area information for instance <ifram>.
+Loading core <Rrom> for timing and area information for instance <R>.
+
+Synthesizing (advanced) Unit <motionCompensator>.
+The following registers are absorbed into counter <LFy>: 1 register on signal <LFy>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+The following registers are absorbed into counter <RGBy>: 1 register on signal <RGBy>.
+Unit <motionCompensator> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x8-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 17
+ 16-bit adder                                          : 2
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 4
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 6
+# Counters                                             : 3
+ 5-bit up counter                                      : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 51
+ Flip-Flops                                            : 51
+# Comparators                                          : 12
+ 32-bit comparator greater                             : 2
+ 5-bit comparator greater                              : 8
+ 8-bit comparator equal                                : 1
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 17
+ 32-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 14
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <mc/FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+WARNING:Xst:2677 - Node <Mmult_n02161> of sequential type is unconnected in block <motionCompensator>.
+WARNING:Xst:2677 - Node <Mmult_n02231> of sequential type is unconnected in block <motionCompensator>.
+WARNING:Xst:2677 - Node <Mmult_n02191> of sequential type is unconnected in block <motionCompensator>.
+
+Optimizing unit <top> ...
+
+Optimizing unit <motionCompensator> ...
+WARNING:Xst:2677 - Node <mc/tmpx_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <mc/tmpx_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <mc/LFx_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <mc/LFx_6> of sequential type is unconnected in block <top>.
+INFO:Xst:2261 - The FF/Latch <mc/c_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <mc/LFx_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 247
+#      GND                         : 5
+#      INV                         : 8
+#      LUT2                        : 21
+#      LUT3                        : 35
+#      LUT4                        : 24
+#      LUT5                        : 31
+#      LUT6                        : 43
+#      MUXCY                       : 33
+#      MUXF7                       : 2
+#      VCC                         : 5
+#      XORCY                       : 40
+# FlipFlops/Latches                : 69
+#      FDC                         : 2
+#      FDR                         : 15
+#      FDRE                        : 44
+#      FDS                         : 2
+#      FDSE                        : 6
+# RAMS                             : 4
+#      RAMB18E1                    : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 18
+#      OBUF                        : 1
+# DSPs                             : 3
+#      DSP48E1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7vx330tffg1157-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              69  out of  408000     0%  
+ Number of Slice LUTs:                  162  out of  204000     0%  
+    Number used as Logic:               162  out of  204000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    178
+   Number with an unused Flip Flop:     109  out of    178    61%  
+   Number with an unused LUT:            16  out of    178     8%  
+   Number of fully used LUT-FF pairs:    53  out of    178    29%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    600     3%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    750     0%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      3  out of   1120     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 73    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.737ns (Maximum Frequency: 174.304MHz)
+   Minimum input arrival time before clock: 4.407ns
+   Maximum output required time after clock: 0.525ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.737ns (frequency: 174.304MHz)
+  Total number of paths / destination ports: 11202 / 230
+-------------------------------------------------------------------------
+Delay:               5.737ns (Levels of Logic = 10)
+  Source:            mc/RGBy_1 (FF)
+  Destination:       R/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: mc/RGBy_1 to R/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.232   0.582  mc/RGBy_1 (mc/RGBy_1)
+     LUT6:I0->O            3   0.043   0.299  mc/Msub_GND_2_o_GND_2_o_sub_15_OUT_cy<5>11 (mc/Msub_GND_2_o_GND_2_o_sub_15_OUT_cy<5>)
+     LUT3:I2->O            9   0.043   0.316  mc/Msub_GND_2_o_GND_2_o_sub_15_OUT_xor<8>11 (mc/GND_2_o_GND_2_o_sub_15_OUT<8>)
+     DSP48E1:A8->P0        1   2.392   0.289  mc/Mmult_n0219 (mc/n0219<0>)
+     LUT4:I3->O            1   0.043   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_lut<2> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_lut<2>)
+     MUXCY:S->O            1   0.230   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<2> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<3> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<3>)
+     MUXCY:CI->O           0   0.013   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<4> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<4>)
+     XORCY:CI->O           1   0.251   0.289  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_xor<5> (mc/GND_2_o_GND_2_o_add_16_OUT<5>)
+     LUT5:I4->O            2   0.043   0.283  mc/Mmux_n0199121 (indexRGB<5>)
+     begin scope: 'R:addra<5>'
+     RAMB18E1:ADDRARDADDR10        0.375          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+    ----------------------------------------
+    Total                      5.737ns (3.677ns logic, 2.060ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1060 / 60
+-------------------------------------------------------------------------
+Offset:              4.407ns (Levels of Logic = 9)
+  Source:            width<7> (PAD)
+  Destination:       R/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination Clock: CLK rising
+
+  Data Path: width<7> to R/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.000   0.298  width_7_IBUF (width_7_IBUF)
+     DSP48E1:B7->P0        1   2.280   0.289  mc/Mmult_n0219 (mc/n0219<0>)
+     LUT4:I3->O            1   0.043   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_lut<2> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_lut<2>)
+     MUXCY:S->O            1   0.230   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<2> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<3> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<3>)
+     MUXCY:CI->O           0   0.013   0.000  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<4> (mc/Madd_GND_2_o_GND_2_o_add_16_OUT_cy<4>)
+     XORCY:CI->O           1   0.251   0.289  mc/Madd_GND_2_o_GND_2_o_add_16_OUT_xor<5> (mc/GND_2_o_GND_2_o_add_16_OUT<5>)
+     LUT5:I4->O            2   0.043   0.283  mc/Mmux_n0199121 (indexRGB<5>)
+     begin scope: 'R:addra<5>'
+     RAMB18E1:ADDRARDADDR10        0.375          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+    ----------------------------------------
+    Total                      4.407ns (3.247ns logic, 1.160ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.525ns (Levels of Logic = 1)
+  Source:            mc/LF_conceal (FF)
+  Destination:       LF_conceal (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: mc/LF_conceal to LF_conceal
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.232   0.293  mc/LF_conceal (mc/LF_conceal)
+     OBUF:I->O                 0.000          LF_conceal_OBUF (LF_conceal)
+    ----------------------------------------
+    Total                      0.525ns (0.232ns logic, 0.293ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.737|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.60 secs
+ 
+--> 
+
+Total memory usage is 454304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   58 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

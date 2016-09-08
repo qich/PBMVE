@@ -1,0 +1,3 @@
+verilog work "MedianFilter.v"
+verilog work "ipcore_dir/Mvram_x.v"
+verilog work "top_testMF.v"

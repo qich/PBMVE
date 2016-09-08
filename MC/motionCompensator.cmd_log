@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/MC/motionCompensator.xst" -ofn "E:/MC/motionCompensator.syr" 

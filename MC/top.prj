@@ -1,0 +1,5 @@
+verilog work "motionCompensator.v"
+verilog work "ipcore_dir/Rrom.v"
+verilog work "ipcore_dir/mvrom.v"
+verilog work "ipcore_dir/ifram.v"
+verilog work "top.v"

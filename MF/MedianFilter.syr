@@ -1,0 +1,731 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: MedianFilter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MedianFilter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MedianFilter"
+Output Format                      : NGC
+Target Device                      : xc7vx330t-3-ffg1157
+
+---- Source Options
+Top Module Name                    : MedianFilter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\MF\MedianFilter.v" into library work
+Parsing module <MedianFilter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <MedianFilter>.
+WARNING:HDLCompiler:413 - "E:\MF\MedianFilter.v" Line 54: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\MF\MedianFilter.v" Line 155: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MedianFilter>.
+    Related source file is "E:\MF\MedianFilter.v".
+        idle = 3'b000
+        cout = 3'b001
+        gen = 3'b010
+        mfgen = 3'b011
+        waiting = 3'b100
+        s0 = 2'b00
+        s1 = 2'b01
+        s2 = 2'b10
+        endstate = 5'b01010
+    Found 9-bit register for signal <idata>.
+    Found 2-bit register for signal <dataState>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <data_fin>.
+    Found 1-bit register for signal <cout_fin>.
+    Found 8-bit register for signal <addr_x0>.
+    Found 8-bit register for signal <addr_y0>.
+    Found 1-bit register for signal <c0>.
+    Found 1-bit register for signal <halt>.
+    Found 1-bit register for signal <gen_fin>.
+    Found 1-bit register for signal <mfgen_start>.
+    Found 5-bit register for signal <c1>.
+    Found 1-bit register for signal <data_call>.
+    Found 4-bit register for signal <nncounter>.
+    Found 8-bit register for signal <addr_col>.
+    Found 8-bit register for signal <addr_row>.
+    Found 72-bit register for signal <n0296[71:0]>.
+    Found 4-bit register for signal <c2>.
+    Found 1-bit register for signal <mfgen_fin>.
+    Found 81-bit register for signal <n0297[80:0]>.
+    Found 9-bit register for signal <medfilt_data>.
+    Found finite state machine <FSM_0> for signal <dataState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_36_OUT> created at line 155.
+    Found 8-bit subtractor for signal <center_x[7]_GND_1_o_sub_61_OUT> created at line 236.
+    Found 8-bit subtractor for signal <center_y[7]_GND_1_o_sub_62_OUT> created at line 237.
+    Found 8-bit adder for signal <center_y[7]_GND_1_o_add_22_OUT> created at line 133.
+    Found 8-bit adder for signal <center_x[7]_GND_1_o_add_23_OUT> created at line 136.
+    Found 32-bit adder for signal <GND_1_o_GND_1_o_add_37_OUT> created at line 155.
+    Found 5-bit adder for signal <c1[4]_GND_1_o_add_57_OUT> created at line 222.
+    Found 4-bit adder for signal <nncounter[3]_GND_1_o_add_80_OUT> created at line 256.
+    Found 4-bit adder for signal <c2[3]_GND_1_o_add_265_OUT> created at line 365.
+    Found 16-bit subtractor for signal <index> created at line 30.
+    Found 32x8-bit multiplier for signal <n0319> created at line 155.
+    Found 8x3-bit Read Only RAM for signal <_n1183>
+    Found 1-bit 5-to-1 multiplexer for signal <state[2]_next_state[2]_wide_mux_13_OUT<0>> created at line 66.
+WARNING:Xst:737 - Found 1-bit latch for signal <Gvector_sig>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator equal for signal <center_x[7]_width[7]_equal_22_o> created at line 130
+    Found 8-bit comparator greater for signal <height[7]_center_y[7]_LessThan_27_o> created at line 142
+    Found 8-bit comparator greater for signal <addr_col[7]_GND_1_o_LessThan_40_o> created at line 169
+    Found 8-bit comparator greater for signal <width[7]_addr_col[7]_LessThan_41_o> created at line 170
+    Found 8-bit comparator greater for signal <addr_row[7]_GND_1_o_LessThan_42_o> created at line 171
+    Found 8-bit comparator greater for signal <height[7]_addr_row[7]_LessThan_43_o> created at line 172
+    Found 4-bit comparator greater for signal <n0092> created at line 255
+    Found 4-bit comparator greater for signal <GND_1_o_nncounter[3]_LessThan_269_o> created at line 367
+    Found 4-bit comparator greater for signal <GND_1_o_nncounter[3]_LessThan_271_o> created at line 368
+    Found 4-bit comparator greater for signal <GND_1_o_nncounter[3]_LessThan_273_o> created at line 369
+    Found 4-bit comparator greater for signal <GND_1_o_nncounter[3]_LessThan_275_o> created at line 370
+    Found 4-bit comparator greater for signal <GND_1_o_nncounter[3]_LessThan_277_o> created at line 371
+    Found 4-bit comparator greater for signal <GND_1_o_nncounter[3]_LessThan_279_o> created at line 372
+    Found 8-bit comparator lessequal for signal <n0191> created at line 409
+    Found 8-bit comparator greater for signal <n0193> created at line 409
+    Found 8-bit comparator lessequal for signal <n0197> created at line 409
+    Found 8-bit comparator greater for signal <n0199> created at line 409
+    Found 8-bit comparator lessequal for signal <n0203> created at line 409
+    Found 8-bit comparator greater for signal <n0205> created at line 409
+    Found 8-bit comparator greater for signal <tmp_data[1][7]_tmp_data[2][7]_LessThan_303_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[0][7]_tmp_data[2][7]_LessThan_304_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[2][7]_tmp_data[1][7]_LessThan_307_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[2][7]_tmp_data[0][7]_LessThan_308_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[4][7]_tmp_data[5][7]_LessThan_313_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[3][7]_tmp_data[5][7]_LessThan_314_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[5][7]_tmp_data[4][7]_LessThan_317_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[5][7]_tmp_data[3][7]_LessThan_318_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[7][7]_tmp_data[8][7]_LessThan_323_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[6][7]_tmp_data[8][7]_LessThan_324_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[8][7]_tmp_data[7][7]_LessThan_327_o> created at line 416
+    Found 8-bit comparator greater for signal <tmp_data[8][7]_tmp_data[6][7]_LessThan_328_o> created at line 416
+    Found 8-bit comparator lessequal for signal <n0239> created at line 423
+    Found 8-bit comparator lessequal for signal <n0241> created at line 423
+    Found 8-bit comparator lessequal for signal <n0245> created at line 423
+    Found 8-bit comparator lessequal for signal <n0247> created at line 423
+    Found 8-bit comparator lessequal for signal <n0251> created at line 423
+    Found 8-bit comparator lessequal for signal <n0253> created at line 423
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred 227 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred  37 Comparator(s).
+	inferred  97 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <MedianFilter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x3-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 32x8-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 10
+ 16-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+ 9-bit subtractor                                      : 1
+# Registers                                            : 20
+ 1-bit register                                        : 8
+ 3-bit register                                        : 1
+ 4-bit register                                        : 2
+ 5-bit register                                        : 1
+ 72-bit register                                       : 1
+ 8-bit register                                        : 4
+ 81-bit register                                       : 1
+ 9-bit register                                        : 2
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Comparators                                          : 37
+ 4-bit comparator greater                              : 7
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 20
+ 8-bit comparator lessequal                            : 9
+# Multiplexers                                         : 97
+ 1-bit 2-to-1 multiplexer                              : 20
+ 1-bit 5-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 40
+ 81-bit 2-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 21
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <tmp_data_8_62> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_71> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_80> of sequential type is unconnected in block <MedianFilter>.
+
+Synthesizing (advanced) Unit <MedianFilter>.
+The following registers are absorbed into counter <center_y>: 1 register on signal <center_y>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1183> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <MedianFilter> synthesized (advanced).
+WARNING:Xst:2677 - Node <tmp_data_8_62> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_71> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_80> of sequential type is unconnected in block <MedianFilter>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x3-bit single-port distributed Read Only RAM         : 1
+# Multipliers                                          : 1
+ 32x8-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 10
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+ 9-bit subtractor                                      : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 216
+ Flip-Flops                                            : 216
+# Comparators                                          : 37
+ 4-bit comparator greater                              : 7
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 20
+ 8-bit comparator lessequal                            : 9
+# Multiplexers                                         : 161
+ 1-bit 2-to-1 multiplexer                              : 92
+ 1-bit 5-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 40
+ 81-bit 2-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 13
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <dataState[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+WARNING:Xst:2677 - Node <Mmult_n03191> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_8> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_17> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_26> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_35> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_44> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_53> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_62> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <r_data_7_71> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_8> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_17> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_26> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_35> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_44> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <tmp_data_8_53> of sequential type is unconnected in block <MedianFilter>.
+WARNING:Xst:2677 - Node <medfilt_data_8> of sequential type is unconnected in block <MedianFilter>.
+
+Optimizing unit <MedianFilter> ...
+WARNING:Xst:1710 - FF/Latch <c2_2> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_7> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c2_3> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c1_4> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tmp_data_8_0> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_1> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_2> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_3> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_4> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_5> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_data_8_6> (without init value) has a constant value of 0 in block <MedianFilter>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <data_fin> in Unit <MedianFilter> is equivalent to the following FF/Latch, which will be removed : <dataState_FSM_FFd1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MedianFilter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 199
+ Flip-Flops                                            : 199
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MedianFilter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 645
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 7
+#      LUT2                        : 50
+#      LUT3                        : 89
+#      LUT4                        : 64
+#      LUT5                        : 69
+#      LUT6                        : 312
+#      MUXCY                       : 22
+#      MUXF7                       : 3
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 203
+#      FDC                         : 5
+#      FDCE                        : 9
+#      FDE                         : 166
+#      FDR                         : 1
+#      FDRE                        : 17
+#      FDSE                        : 1
+#      LD                          : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 70
+#      IBUF                        : 29
+#      OBUF                        : 41
+# DSPs                             : 1
+#      DSP48E1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7vx330tffg1157-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             202  out of  408000     0%  
+ Number of Slice LUTs:                  594  out of  204000     0%  
+    Number used as Logic:               594  out of  204000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    597
+   Number with an unused Flip Flop:     395  out of    597    66%  
+   Number with an unused LUT:             3  out of    597     0%  
+   Number of fully used LUT-FF pairs:   199  out of    597    33%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                          71
+ Number of bonded IOBs:                  71  out of    600    11%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      1  out of   1120     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 199   |
+Mram__n11831(Mram__n1183111:O)     | NONE(*)(Gvector_sig)   | 1     |
+Mram__n1183(Mram__n118312:O)       | NONE(*)(next_state_0)  | 3     |
+-----------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.183ns (Maximum Frequency: 314.169MHz)
+   Minimum input arrival time before clock: 2.460ns
+   Maximum output required time after clock: 5.554ns
+   Maximum combinational path delay: 4.224ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.183ns (frequency: 314.169MHz)
+  Total number of paths / destination ports: 29841 / 408
+-------------------------------------------------------------------------
+Delay:               3.183ns (Levels of Logic = 7)
+  Source:            tmp_data_8_68 (FF)
+  Destination:       tmp_data_8_18 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: tmp_data_8_68 to tmp_data_8_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.232   0.507  tmp_data_8_68 (tmp_data_8_68)
+     LUT4:I0->O            3   0.043   0.466  n0193111 (n019311)
+     LUT6:I2->O            2   0.043   0.293  tmp_data[0][7]_tmp_data[1][7]_LessThan_335_o246_SW2 (N184)
+     LUT6:I5->O            9   0.043   0.326  tmp_data[0][7]_tmp_data[1][7]_LessThan_335_o2 (tmp_data[0][7]_tmp_data[1][7]_LessThan_335_o)
+     LUT6:I5->O            1   0.043   0.428  tmp_data[1][7]_tmp_data[2][7]_LessThan_334_o8 (tmp_data[1][7]_tmp_data[2][7]_LessThan_334_o1)
+     LUT5:I2->O            1   0.043   0.289  tmp_data[1][7]_tmp_data[2][7]_LessThan_334_o9 (tmp_data[1][7]_tmp_data[2][7]_LessThan_334_o2)
+     LUT6:I5->O           12   0.043   0.340  tmp_data[1][7]_tmp_data[2][7]_LessThan_334_o101 (tmp_data[1][7]_tmp_data[2][7]_LessThan_334_o)
+     LUT6:I5->O            1   0.043   0.000  Mmux__n0621103 (_n0621<18>)
+     FDE:D                    -0.001          tmp_data_8_18
+    ----------------------------------------
+    Total                      3.183ns (0.533ns logic, 2.650ns route)
+                                       (16.7% logic, 83.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 434 / 51
+-------------------------------------------------------------------------
+Offset:              2.460ns (Levels of Logic = 6)
+  Source:            height<0> (PAD)
+  Destination:       idata_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: height<0> to idata_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.000   0.555  height_0_IBUF (height_0_IBUF)
+     LUT6:I0->O            1   0.043   0.289  height[7]_addr_row[7]_LessThan_43_o2 (height[7]_addr_row[7]_LessThan_43_o1)
+     LUT3:I2->O            1   0.043   0.343  height[7]_addr_row[7]_LessThan_43_o11 (height[7]_addr_row[7]_LessThan_43_o11)
+     LUT6:I4->O            1   0.043   0.289  addr_col[7]_height[7]_OR_12_o6 (addr_col[7]_height[7]_OR_12_o6)
+     LUT6:I5->O            3   0.043   0.299  addr_col[7]_height[7]_OR_12_o7 (addr_col[7]_height[7]_OR_12_o)
+     LUT5:I4->O            9   0.043   0.316  _n0723_inv1 (_n0723_inv)
+     FDCE:CE                   0.153          idata_0
+    ----------------------------------------
+    Total                      2.460ns (0.368ns logic, 2.092ns route)
+                                       (15.0% logic, 85.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Mram__n1183'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              0.773ns (Levels of Logic = 3)
+  Source:            enable (PAD)
+  Destination:       next_state_0 (LATCH)
+  Destination Clock: Mram__n1183 falling
+
+  Data Path: enable to next_state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.000   0.343  enable_IBUF (enable_IBUF)
+     LUT6:I4->O            1   0.043   0.343  Mmux_state[2]_next_state[2]_wide_mux_13_OUT<0>22 (Mmux_state[2]_next_state[2]_wide_mux_13_OUT<0>21)
+     LUT3:I1->O            1   0.043   0.000  Mmux_state[2]_next_state[2]_wide_mux_13_OUT<0>23 (state[2]_next_state[2]_wide_mux_13_OUT<0>)
+     LD:D                     -0.035          next_state_0
+    ----------------------------------------
+    Total                      0.773ns (0.086ns logic, 0.687ns route)
+                                       (11.1% logic, 88.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 39304 / 40
+-------------------------------------------------------------------------
+Offset:              5.554ns (Levels of Logic = 21)
+  Source:            addr_row_1 (FF)
+  Destination:       index<15> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: addr_row_1 to index<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.232   0.582  addr_row_1 (addr_row_1)
+     LUT6:I0->O            3   0.043   0.299  Msub_GND_1_o_GND_1_o_sub_36_OUT_cy<5>11 (Msub_GND_1_o_GND_1_o_sub_36_OUT_cy<5>)
+     LUT3:I2->O            9   0.043   0.316  Msub_GND_1_o_GND_1_o_sub_36_OUT_xor<8>11 (GND_1_o_GND_1_o_sub_36_OUT<8>)
+     DSP48E1:A8->P0        2   2.392   0.347  Mmult_n0319 (n0319<0>)
+     LUT2:I0->O            1   0.043   0.289  Msub_index (Msub_index)
+     LUT3:I2->O            1   0.043   0.000  Msub_index_lut<0>1 (Msub_index_lut<0>1)
+     MUXCY:S->O            1   0.230   0.000  Msub_index_cy<0>_0 (Msub_index_cy<0>1)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_1 (Msub_index_cy<0>2)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_2 (Msub_index_cy<0>3)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_3 (Msub_index_cy<0>4)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_4 (Msub_index_cy<0>5)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_5 (Msub_index_cy<0>6)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_6 (Msub_index_cy<0>7)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_7 (Msub_index_cy<0>8)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_8 (Msub_index_cy<0>9)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_9 (Msub_index_cy<0>10)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_10 (Msub_index_cy<0>11)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_11 (Msub_index_cy<0>12)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_12 (Msub_index_cy<0>13)
+     MUXCY:CI->O           0   0.012   0.000  Msub_index_cy<0>_13 (Msub_index_cy<0>14)
+     XORCY:CI->O           1   0.251   0.279  Msub_index_xor<0>_14 (index_15_OBUF)
+     OBUF:I->O                 0.000          index_15_OBUF (index<15>)
+    ----------------------------------------
+    Total                      5.554ns (3.439ns logic, 2.114ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Mram__n11831'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.605ns (Levels of Logic = 1)
+  Source:            Gvector_sig (LATCH)
+  Destination:       Gvector_sig (PAD)
+  Source Clock:      Mram__n11831 falling
+
+  Data Path: Gvector_sig to Gvector_sig
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.326   0.279  Gvector_sig (Gvector_sig_OBUF)
+     OBUF:I->O                 0.000          Gvector_sig_OBUF (Gvector_sig)
+    ----------------------------------------
+    Total                      0.605ns (0.326ns logic, 0.279ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2888 / 16
+-------------------------------------------------------------------------
+Delay:               4.224ns (Levels of Logic = 20)
+  Source:            width<7> (PAD)
+  Destination:       index<15> (PAD)
+
+  Data Path: width<7> to index<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.000   0.298  width_7_IBUF (width_7_IBUF)
+     DSP48E1:B7->P0        2   2.280   0.347  Mmult_n0319 (n0319<0>)
+     LUT2:I0->O            1   0.043   0.289  Msub_index (Msub_index)
+     LUT3:I2->O            1   0.043   0.000  Msub_index_lut<0>1 (Msub_index_lut<0>1)
+     MUXCY:S->O            1   0.230   0.000  Msub_index_cy<0>_0 (Msub_index_cy<0>1)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_1 (Msub_index_cy<0>2)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_2 (Msub_index_cy<0>3)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_3 (Msub_index_cy<0>4)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_4 (Msub_index_cy<0>5)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_5 (Msub_index_cy<0>6)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_6 (Msub_index_cy<0>7)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_7 (Msub_index_cy<0>8)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_8 (Msub_index_cy<0>9)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_9 (Msub_index_cy<0>10)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_10 (Msub_index_cy<0>11)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_11 (Msub_index_cy<0>12)
+     MUXCY:CI->O           1   0.012   0.000  Msub_index_cy<0>_12 (Msub_index_cy<0>13)
+     MUXCY:CI->O           0   0.012   0.000  Msub_index_cy<0>_13 (Msub_index_cy<0>14)
+     XORCY:CI->O           1   0.251   0.279  Msub_index_xor<0>_14 (index_15_OBUF)
+     OBUF:I->O                 0.000          index_15_OBUF (index<15>)
+    ----------------------------------------
+    Total                      4.224ns (3.010ns logic, 1.214ns route)
+                                       (71.3% logic, 28.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.183|         |         |         |
+Mram__n1183    |         |    0.605|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Mram__n1183
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.557|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Mram__n11831
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    0.777|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.44 secs
+ 
+--> 
+
+Total memory usage is 453472 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   39 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

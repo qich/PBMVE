@@ -1,0 +1,43 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/MC/testTop_isim_beh.exe -prj E:/MC/testTop_beh.prj work.testTop work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/MC/motionCompensator.v" into library work
+Analyzing Verilog file "E:/MC/ipcore_dir/Rrom.v" into library work
+Analyzing Verilog file "E:/MC/ipcore_dir/mvrom.v" into library work
+Analyzing Verilog file "E:/MC/ipcore_dir/ifram.v" into library work
+Analyzing Verilog file "E:/MC/top.v" into library work
+Analyzing Verilog file "E:/MC/testTop.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "E:/MC/top.v" Line 53: Size mismatch in connection of port <addra>. Formal port size is 2-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "E:/MC/top.v" Line 54: Size mismatch in connection of port <douta>. Formal port size is 9-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "E:/MC/top.v" Line 58: Size mismatch in connection of port <addra>. Formal port size is 2-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "E:/MC/top.v" Line 59: Size mismatch in connection of port <douta>. Formal port size is 9-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "E:/MC/top.v" Line 66: Size mismatch in connection of port <addra>. Formal port size is 6-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "E:/MC/top.v" Line 73: Size mismatch in connection of port <addra>. Formal port size is 6-bit while actual signal size is 16-bit.
+Completed static elaboration
+Compiling module motionCompensator
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="virte...
+Compiling module mvrom
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="virte...
+Compiling module ifram
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="virte...
+Compiling module Rrom
+Compiling module top
+Compiling module testTop
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 17 Verilog Units
+Built simulation executable E:/MC/testTop_isim_beh.exe
+Fuse Memory Usage: 34668 KB
+Fuse CPU Usage: 716 ms
